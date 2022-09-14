@@ -12,6 +12,8 @@ app.get('/api/v1/:postcode', (req,res) => {
   .then(function (response) {
     // handle success
     console.log(response.data.result);
+    res.send(response.data.result);
+    res.end();
   })
   .catch(function (error) {
     // handle error
